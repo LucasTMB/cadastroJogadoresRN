@@ -16,7 +16,7 @@ const store = createStore(reducer);
 const Stack = createStackNavigator();
 
 const myOptions = {
-  title: 'App de Exemplo',
+  title: 'Cadastro de Jogadores',
   headerTintColor: 'white',
   headerStyle: {
     backgroundColor: '#006aff',
