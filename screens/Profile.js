@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, Linking, Platform, Alert } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Title, Card, Button } from 'react-native-paper'
-import { MaterialIcons, Entypo } from '@expo/vector-icons'
+import { MaterialIcons, Ionicons } from '@expo/vector-icons'
 
 const Profile = (props) => {
 
@@ -53,19 +53,19 @@ const Profile = (props) => {
                 Linking.openURL(`mailto:${email}`)
             }}>
                 <View style={styles.cardContent}>
-                    <MaterialIcons name="email" size={32} color="#006aff" />
+                    <MaterialIcons name="outlined-flag" size={32} color="#006aff" />
                     <Text style={styles.mytext}>{email}</Text>
                 </View>
             </Card>
             <Card style={styles.mycard} onPress={() => openDial()}>
                 <View style={styles.cardContent}>
-                    <Entypo name="phone" size={32} color="#006aff" />
+                    <MaterialIcons name="format-list-numbered" size={32} color="#006aff" />
                     <Text style={styles.mytext}>{phone}</Text>
                 </View>
             </Card>
             <Card style={styles.mycard}>
                 <View style={styles.cardContent}>
-                    <MaterialIcons name="attach-money" size={32} color="#006aff" />
+                    <Ionicons name="shirt-sharp" size={32} color="#006aff" />
                     <Text style={styles.mytext}>{salary}</Text>
                 </View>
             </Card>

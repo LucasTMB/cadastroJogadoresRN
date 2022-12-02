@@ -172,7 +172,7 @@ const CreateEmployee = ({ navigation, route }) => {
           onChangeText={(text) => setName(text)}
         />
         <TextInput
-          label="E-mail"
+          label="Nacionalidade"
           style={styles.inputStyle}
           value={email}
           theme={theme}
@@ -181,7 +181,7 @@ const CreateEmployee = ({ navigation, route }) => {
           onChangeText={(text) => setEmail(text)}
         />
         <TextInput
-          label="Telefone"
+          label="Número"
           style={styles.inputStyle}
           value={phone}
           theme={theme}
@@ -192,7 +192,7 @@ const CreateEmployee = ({ navigation, route }) => {
         />
 
         <TextInput
-          label="Salário"
+          label="Clube"
           style={styles.inputStyle}
           value={salary}
           theme={theme}
@@ -201,7 +201,7 @@ const CreateEmployee = ({ navigation, route }) => {
           onChangeText={(text) => setSalary(text)}
         />
         <TextInput
-          label="Cargo"
+          label="Posição"
           style={styles.inputStyle}
           value={position}
           theme={theme}

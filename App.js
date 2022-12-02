@@ -30,12 +30,12 @@ function App() {
         <Stack.Screen
           name="Create"
           component={CreateEmployee}
-          options={{ ...myOptions, title: 'Funcionário' }}
+          options={{ ...myOptions, title: 'Jogador' }}
         />
         <Stack.Screen
           name="Profile"
           component={Profile}
-          options={{ ...myOptions, title: 'Perfil do Funcionário' }}
+          options={{ ...myOptions, title: 'Perfil do Jogador' }}
         />
       </Stack.Navigator>
     </View>
