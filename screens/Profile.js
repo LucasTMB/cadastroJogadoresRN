@@ -49,15 +49,13 @@ const Profile = (props) => {
                 <Title>{name}</Title>
                 <Text style={{ fontSize: 15 }}>{position}</Text>
             </View>
-            <Card style={styles.mycard} onPress={() => {
-                Linking.openURL(`mailto:${email}`)
-            }}>
+            <Card style={styles.mycard}>
                 <View style={styles.cardContent}>
                     <MaterialIcons name="outlined-flag" size={32} color="#006aff" />
                     <Text style={styles.mytext}>{email}</Text>
                 </View>
             </Card>
-            <Card style={styles.mycard} onPress={() => openDial()}>
+            <Card style={styles.mycard}>
                 <View style={styles.cardContent}>
                     <MaterialIcons name="format-list-numbered" size={32} color="#006aff" />
                     <Text style={styles.mytext}>{phone}</Text>
