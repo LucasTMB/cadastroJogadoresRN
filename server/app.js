@@ -3,10 +3,10 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 const app = express();
 const mongoose = require('mongoose');
-require('./Employee');
+require('./Player');
 app.use(express.json({ limit: '10kb' }));
 
-const Employee = mongoose.model('employee');
+const Player = mongoose.model('player');
 
 const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
@@ -25,7 +25,7 @@ mongoose.connection.on('error', (err) => {
 });
 
 app.get('/', (req, res) => {
-  Employee.find({})
+  Player.find({})
     .then((data) => {
       res.send(data);
     })
@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/send-data', (req, res) => {
-  const employee = new Employee({
+  const player = new Player({
     name: req.body.name,
     email: req.body.email,
     phone: req.body.phone,
@@ -43,7 +43,7 @@ app.post('/send-data', (req, res) => {
     salary: req.body.salary,
     position: req.body.position,
   });
-  employee
+  player
     .save()
     .then((data) => {
       console.log(data);
@@ -55,7 +55,7 @@ app.post('/send-data', (req, res) => {
 });
 
 app.post('/delete', (req, res) => {
-  Employee.findByIdAndRemove(req.body.id)
+  Player.findByIdAndRemove(req.body.id)
     .then((data) => {
       console.log(data);
       res.send(data);
@@ -66,7 +66,7 @@ app.post('/delete', (req, res) => {
 });
 
 app.post('/update', (req, res) => {
-  Employee.findByIdAndUpdate(req.body.id, {
+  Player.findByIdAndUpdate(req.body.id, {
     name: req.body.name,
     email: req.body.email,
     phone: req.body.phone,

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const EmpoyeeSchema = new mongoose.Schema({
+const PlayerSchema = new mongoose.Schema({
     name:String,
     email:String,
     phone:String,
@@ -10,4 +10,4 @@ const EmpoyeeSchema = new mongoose.Schema({
 })
 
 
-mongoose.model("employee",EmpoyeeSchema)
+mongoose.model("player",PlayerSchema)
