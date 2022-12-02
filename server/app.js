@@ -37,10 +37,10 @@ app.get('/', (req, res) => {
 app.post('/send-data', (req, res) => {
   const player = new Player({
     name: req.body.name,
-    email: req.body.email,
-    phone: req.body.phone,
+    country: req.body.country,
+    number: req.body.number,
     picture: req.body.picture,
-    salary: req.body.salary,
+    team: req.body.team,
     position: req.body.position,
   });
   player
@@ -68,10 +68,10 @@ app.post('/delete', (req, res) => {
 app.post('/update', (req, res) => {
   Player.findByIdAndUpdate(req.body.id, {
     name: req.body.name,
-    email: req.body.email,
-    phone: req.body.phone,
+    country: req.body.country,
+    number: req.body.number,
     picture: req.body.picture,
-    salary: req.body.salary,
+    team: req.body.team,
     position: req.body.position,
   })
     .then((data) => {
